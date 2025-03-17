@@ -1,0 +1,9 @@
+cardinal = {
+    key = "cardinal"
+    icon = "gfx/interface/icons/traits/cardinal.dds"
+    can_be_inherited = no
+    random = no
+    opinion_modifier = {
+        cardinal_opinion = 10
+    }
+}

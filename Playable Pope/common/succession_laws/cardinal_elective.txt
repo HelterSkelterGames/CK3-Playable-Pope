@@ -1,0 +1,23 @@
+cardinal_elective_succession_law = {
+    key = "cardinal_elective_succession_law"
+    is_elective = yes
+    title_tier = empire  # Ensures only empires can use it (HRE)
+    
+    ai_will_do = { factor = 1 }
+
+    effect = {
+        set_succession_law = cardinal_elective_succession_law
+    }
+
+    voting_power = {
+        has_trait = cardinal  # Only characters with the "Cardinal" trait can vote
+        factor = 5
+    }
+
+    candidate_requirements = {
+        has_religion = christianity
+        is_male = yes
+        is_adult = yes
+        is_landed = yes
+    }
+}

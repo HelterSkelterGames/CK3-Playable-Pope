@@ -1,0 +1,27 @@
+namespace = cardinal_events
+
+event = {
+    id = cardinal_events.1
+    title = "Appointment of Cardinals"
+    desc = "The Pope has selected new cardinals."
+    trigger = {
+        has_landed_title = k_papal_state
+        is_pope = yes
+    }
+    option = {
+        name = "Appoint New Cardinals"
+        effect = {
+            limit = {
+                has_trait = bishop
+                NOT = { has_trait = cardinal }
+                is_male = yes
+                is_adult = yes
+            }
+            random_list = {
+                100 = {
+                    add_trait = cardinal
+                }
+            }
+        }
+    }
+}
